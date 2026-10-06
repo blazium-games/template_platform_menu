@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/board.gd" id="1_board"]
+
+[node name="Board" type="Node2D"]
+script = ExtResource("1_board")
+
+[node name="SheetLens" type="Camera2D" parent="."]
+
+[node name="Field" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(0, 0, 1280, 0, 1280, 720, 0, 720)
+color = Color(0.1, 0.14, 0.16, 1)
+
+[node name="Caption" type="Label" parent="."]
+offset_left = 80
+offset_top = 80
+offset_right = 640
+offset_bottom = 140
+
+[node name="PassLine" type="Label" parent="."]
+offset_left = 80
+offset_top = 160
+offset_right = 640
+offset_bottom = 220
+
+[node name="RejectLine" type="Label" parent="."]
+offset_left = 80
+offset_top = 240
+offset_right = 640
+offset_bottom = 300

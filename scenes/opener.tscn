@@ -1,0 +1,51 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/presenter.gd" id="1_opener"]
+
+[node name="Opener" type="Node2D"]
+script = ExtResource("1_opener")
+
+[node name="SheetLens" type="Camera2D" parent="."]
+
+[node name="Field" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(0, 0, 1280, 0, 1280, 720, 0, 720)
+color = Color(0.12, 0.14, 0.18, 1)
+
+[node name="AndroidRow" type="ColorRect" parent="."]
+offset_left = 80
+offset_top = 80
+offset_right = 520
+offset_bottom = 180
+
+[node name="AndroidLabel" type="Label" parent="AndroidRow"]
+offset_left = 16
+offset_top = 28
+offset_right = 400
+offset_bottom = 70
+text = "Android"
+
+[node name="IosRow" type="ColorRect" parent="."]
+offset_left = 80
+offset_top = 200
+offset_right = 520
+offset_bottom = 300
+
+[node name="IosLabel" type="Label" parent="IosRow"]
+offset_left = 16
+offset_top = 28
+offset_right = 400
+offset_bottom = 70
+text = "iOS"
+
+[node name="WebRow" type="ColorRect" parent="."]
+offset_left = 80
+offset_top = 320
+offset_right = 520
+offset_bottom = 420
+
+[node name="WebLabel" type="Label" parent="WebRow"]
+offset_left = 16
+offset_top = 28
+offset_right = 400
+offset_bottom = 70
+text = "Web"
